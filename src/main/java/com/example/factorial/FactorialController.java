@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 @RestController
-@RequestMapping("api/factorial")
+//@RequestMapping("api/factorial")
 public class FactorialController {
 
     @GetMapping("/factorialOfN")
 
-        public long fact(@RequestParam(value = "number", defaultValue = "0") long n)
+        public static long fact(@RequestParam(value = "number", defaultValue = "0") long n)
         {
             long result=1;
             if(n==0)
@@ -27,7 +27,7 @@ public class FactorialController {
             return result;
         }
     @GetMapping("/factorialsTillN")
-        public ArrayList<Long> facts(@RequestParam(value="number", defaultValue = "0") long n)
+        public static ArrayList<Long> facts(@RequestParam(value = "number", defaultValue = "0") long n)
         {
             ArrayList<Long> res =new ArrayList<>();
             long result=1;
