@@ -24,6 +24,14 @@ class FactorialControllerTest {
         var resultStatusCode=result.getStatusCode();
         assertEquals(HttpStatus.OK, resultStatusCode);
     }
+    @Test
+    void fact2() {
+        var controller = new FactorialController();
+        long n=-1;
+        var result=controller.fact(n);
+        var resultStatusCode=result.getStatusCode();
+        assertEquals(HttpStatus.BAD_REQUEST, resultStatusCode);
+    }
 
 
     @Test

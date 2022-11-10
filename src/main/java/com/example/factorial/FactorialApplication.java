@@ -9,5 +9,4 @@ public class FactorialApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FactorialApplication.class, args);
 	}
-
 }
